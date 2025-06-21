@@ -30,3 +30,5 @@ tracing-appender = "0.2.3"
 derive_builder = "0.20.0"
 chrono = { version = "0.4.37", features = ["serde"] }
 derive_more = "0.99.0"
+strum = "0.26"
+strum_macros = "0.26"
