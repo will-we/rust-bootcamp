@@ -8,4 +8,4 @@ rust 训练营
 
 [rust-ecosystem](04-rust-ecosystem)
 
-[rust-chat](05-rust-chat))
+[rust-chat](05-rust-chat)
