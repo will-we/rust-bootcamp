@@ -19,6 +19,7 @@ pub(crate) struct AppState {
 
 #[derive(Debug)]
 pub(crate) struct AppStateInner {
+    #[allow(dead_code)]
     pub(crate) config: AppConfig,
 }
 

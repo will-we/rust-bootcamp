@@ -13,6 +13,7 @@ pub struct ServerConfig {
     pub port: u16,
 }
 impl AppConfig {
+    #[allow(dead_code)]
     pub fn load() -> Result<Self> {
         // read from  ./app.yml, or /etc/config/app.yml, or from env CHAT_CONFIG
         let ret = match (
