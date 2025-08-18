@@ -1,16 +1,23 @@
 -- this file is used for postgresql database initialization
 -- create user table
+DROP table if exists users;
 CREATE TABLE IF NOT EXISTS users(
-                                    id bigserial PRIMARY KEY,
-                                    fullname varchar(64) NOT NULL,
+    id bigserial PRIMARY KEY,
+    ws_id bigserial,
+    fullname varchar(64) NOT NULL,
     email varchar(64) NOT NULL,
     -- hashed argon2 password
     password VARCHAR(64) NOT NULL,
-    created_at timestamp DEFAULT CURRENT_TIMESTAMP
+    created_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
     );
 
 -- create index for users for email
 CREATE UNIQUE INDEX IF NOT EXISTS email_index ON users(email);
+
+-- ----------------------------
+-- Records of users
+-- ----------------------------
+INSERT INTO "public"."users" VALUES (1, 1, 'will-we', 'zhangsan', '123456', '2025-08-19 01:17:44+00');
 
 -- create chat type: single, group, private_channel, public_channel
 CREATE TYPE chat_type AS ENUM(

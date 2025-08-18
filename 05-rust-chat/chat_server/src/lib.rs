@@ -1,5 +1,7 @@
 mod config;
 mod handlers;
+mod models;
+mod error;
 
 use handlers::*;
 
