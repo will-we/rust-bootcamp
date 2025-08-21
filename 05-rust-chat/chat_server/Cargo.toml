@@ -14,5 +14,7 @@ tokio = {workspace = true}
 tracing = {workspace = true}
 tracing-subscriber = {workspace = true}
 chrono = { version = "0.4.38", features = ["serde"] }
+argon2 = { version = "0.5.3", features = ["std"] }
+dotenvy = "0.15.7"
 
 [dev-dependencies]
