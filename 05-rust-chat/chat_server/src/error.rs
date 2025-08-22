@@ -10,6 +10,10 @@ pub enum AppError {
     #[error("password hash error: {0}")]
     PasswordHashError(#[from] argon2::password_hash::Error),
 
+    #[error("jwt error: {0}")]
+    JwtError(#[from] jwt_simple::Error),
+
+
     #[error("http header parse error: {0}")]
     HttpHeaderError(#[from] axum::http::header::InvalidHeaderValue),
 }

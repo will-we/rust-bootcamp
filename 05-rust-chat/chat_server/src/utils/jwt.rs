@@ -60,7 +60,7 @@ mod tests {
             ws_id: 1,
             fullname: "zhangSan".to_string(),
             email: "test@mail.com".to_string(),
-            password_hash: Some("111".parse()?),
+            password_hash: None,
             created_at: chrono::Utc::now(),
         };
 
