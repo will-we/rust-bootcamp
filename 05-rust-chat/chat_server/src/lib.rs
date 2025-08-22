@@ -3,6 +3,8 @@ mod handlers;
 mod models;
 mod error;
 
+mod utils;
+
 use handlers::*;
 
 use std::{ops::Deref, sync::Arc};
